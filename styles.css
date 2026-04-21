@@ -24,8 +24,8 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-primary);
-    line-height: 1.8;
-    font-size: 24px;
+    line-height: 1.7;
+    font-size: 18px;
     overflow-x: hidden;
 }
 
@@ -75,17 +75,17 @@ h1, h2, h3, h4 {
 }
 
 .hero h1 {
-    font-size: 7.5rem;
+    font-size: 5rem;
     line-height: 1.1;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--text-primary);
 }
 
 .hero p {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: var(--text-secondary);
-    max-width: 1000px;
-    margin: 0 auto 3rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
 }
 
 .btn-scroll {
@@ -123,9 +123,9 @@ h1, h2, h3, h4 {
 }
 
 .section-title {
-    font-size: 5.5rem;
+    font-size: 4rem;
     color: var(--accent-gold);
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 /* Section 1: Đặt vấn đề */
@@ -137,8 +137,8 @@ h1, h2, h3, h4 {
 }
 
 .text-block p {
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
     color: var(--text-secondary);
 }
 
@@ -189,7 +189,7 @@ h1, h2, h3, h4 {
 }
 
 .theory-highlight p {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-bottom: 0;
     color: var(--text-primary);
 }
@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
 .theory-card-mini.accent-red h5 { color: var(--accent-red); }
 
 .theory-card-mini p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
     margin-bottom: 0;
 }
@@ -350,9 +350,9 @@ h1, h2, h3, h4 {
 }
 
 .analysis-text p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .summary-line {
@@ -419,9 +419,9 @@ h1, h2, h3, h4 {
 }
 
 .sol-body p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .sol-body p:last-child {
