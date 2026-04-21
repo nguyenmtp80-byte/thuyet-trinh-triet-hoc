@@ -125,7 +125,8 @@ h1, h2, h3, h4 {
 .section-title {
     font-size: 4rem;
     color: var(--accent-gold);
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
 }
 
 /* Section 1: Đặt vấn đề */
@@ -140,6 +141,12 @@ h1, h2, h3, h4 {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     color: var(--text-secondary);
+    text-align: justify;
+}
+
+.text-block {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text-block strong {
@@ -250,6 +257,10 @@ h1, h2, h3, h4 {
     font-size: 1.8rem;
     color: var(--text-secondary);
     margin-bottom: 4rem;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .case-study-box {
