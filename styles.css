@@ -7,7 +7,7 @@
     --accent-red: #ef4444;
     --accent-blue: #3b82f6;
     --glass-border: rgba(255, 255, 255, 0.1);
-    --section-padding: 8rem 0;
+    --section-padding: 12rem 0;
 }
 
 html {
@@ -38,6 +38,7 @@ h1, h2, h3, h4 {
     width: 85%;
     max-width: 1600px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 /* Hero Section */
