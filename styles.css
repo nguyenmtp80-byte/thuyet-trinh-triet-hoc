@@ -106,11 +106,6 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 20px var(--accent-gold);
 }
 
-.nav-item.active .nav-text {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .nav-item:hover .nav-text {
     opacity: 1;
     transform: translateX(0);
