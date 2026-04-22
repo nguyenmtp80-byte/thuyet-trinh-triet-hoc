@@ -736,3 +736,29 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+.kahoot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #46178f 0%, #6e25da 100%);
+    color: white;
+    padding: 1.5rem 3.5rem;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(70, 23, 143, 0.3);
+}
+
+.kahoot-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(70, 23, 143, 0.5);
+    background: linear-gradient(135deg, #6e25da 0%, #46178f 100%);
+}
+
+.kahoot-btn i {
+    font-size: 1.2rem;
+}
