@@ -371,6 +371,18 @@
             });
         });
     </script>
+    <script>
+        // Interactive Analysis Cards
+        document.querySelectorAll('.analysis-card-full').forEach(card => {
+            card.addEventListener('click', () => {
+                // Close other cards (optional, but cleaner)
+                // document.querySelectorAll('.analysis-card-full').forEach(other => {
+                //     if(other !== card) other.classList.remove('active');
+                // });
+                card.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

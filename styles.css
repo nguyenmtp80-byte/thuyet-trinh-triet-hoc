@@ -495,7 +495,15 @@ h1, h2, h3, h4 {
     padding: 3rem;
     border-radius: 24px;
     border: 1px solid var(--glass-border);
-    align-items: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.analysis-card-full:hover {
+    border-color: var(--accent-gold);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .analysis-icon {
@@ -519,10 +527,54 @@ h1, h2, h3, h4 {
     color: #000;
 }
 
-.analysis-card-full:hover {
-    transform: translateY(-10px);
+.analysis-text {
+    max-height: 80px; /* Show only title initially */
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.analysis-text h5 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--accent-gold);
+}
+
+.analysis-text p {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.analysis-card-full.active {
+    align-items: flex-start;
+    background: rgba(245, 158, 11, 0.03);
     border-color: var(--accent-gold);
-    box-shadow: 0 15px 30px rgba(245, 158, 11, 0.1);
+}
+
+.analysis-card-full.active .analysis-text {
+    max-height: 500px;
+}
+
+.analysis-card-full.active .analysis-text p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.analysis-card-full::after {
+    content: "\f067"; /* Plus icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold);
+    transition: all 0.3s ease;
+}
+
+.analysis-card-full.active::after {
+    content: "\f068"; /* Minus icon */
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .analysis-icon i {
