@@ -16,10 +16,6 @@
 
 <body>
     <nav class="side-nav">
-        <a href="#" class="nav-item">
-            <span class="nav-num">00</span>
-            <span class="nav-text">Trang chủ</span>
-        </a>
         <a href="#dat-van-de" class="nav-item">
             <span class="nav-num">01</span>
             <span class="nav-text">Đặt vấn đề</span>
@@ -282,6 +278,7 @@
     </footer>
 
     <script>
+        // Scroll Reveal
         const reveals = document.querySelectorAll('.reveal');
         const scrollHandler = () => {
             reveals.forEach(el => {
@@ -294,15 +291,61 @@
             });
         };
         window.addEventListener('scroll', scrollHandler);
-        scrollHandler(); // Initial trigger
+        scrollHandler();
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Scroll Spy & Side Nav Active State
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('section');
+
+        const scrollSpy = () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', scrollSpy);
+        scrollSpy();
+
+        // Smooth scroll & Staggered animation
+        navItems.forEach((anchor, index) => {
+            // Staggered entrance
+            anchor.style.opacity = '0';
+            anchor.style.transform = 'translateX(-30px)';
+            anchor.style.transitionDelay = `${index * 0.1}s`;
+            
+            setTimeout(() => {
+                anchor.style.opacity = '1';
+                anchor.style.transform = 'translateX(0)';
+            }, 100);
+
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Click feedback
+                    this.classList.add('active');
+                    this.classList.add('clicked');
+                    setTimeout(() => this.classList.remove('clicked'), 500);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
